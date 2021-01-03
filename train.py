@@ -14,7 +14,14 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
-ds = ### YOUR CODE HERE ###
+ 
+### YOUR CODE HERE ###
+
+ds = [
+      'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'
+      ]
+
+dataset = Dataset.File.from_files(path=ds)
 
 x, y = clean_data(ds)
 
