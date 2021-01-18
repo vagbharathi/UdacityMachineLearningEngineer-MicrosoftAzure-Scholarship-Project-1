@@ -21,7 +21,7 @@ ds = [
       'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'
       ]
 
-dataset = Dataset.File.from_files(path=ds)
+dataset = TabularDatasetFactory.from_delimited_files(path=ds)
 
 x, y = clean_data(ds)
 
